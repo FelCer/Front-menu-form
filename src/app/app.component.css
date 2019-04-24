@@ -47,11 +47,20 @@ section label:hover{
 	section label{
 		display:block;
 	}
+	.containerOne{
+		height: 550px !important;
+	}
+	.containerT{
+		height: 550px !important;
+		width: 80%;
+		margin-left: 20% !important;
+		margin-top: 20% !important;
+	}
 	.menu{
 		position:absolute;
 		background:#4E94AB;
 		width:70%;
-		margin-left:-70%;
+		margin-left:-80%;
 		transition: all 0.5s;
 	}
 	.menu ul{
@@ -62,10 +71,39 @@ section label:hover{
 	}
 	#btn-menu:checked ~ .menu{
 		margin: 0;
+		
 	}
+	.con{
+		position: absolute;
+		top: 300px !important; 
+		left: 30px !important;
+	}
+	.containerF{
+		width: 35% !important;
+			margin-top: 3% !important;
+	}
+	.containerF p{
+		text-align: center;
+		font-family:sans-serif;
+		color: #fff;
+	}
+	.containerError{
+		margin-left: 18% !important;
+			margin-top: 10% !important;
+			width: 30% !important;
+	}
+	.errorP p{
+		text-align: center;
+		font-family:sans-serif;
+		color: #fff;
+	}
+	
 }
-.containerTable{
-  height: 410px !important;
+.containerT{
+	height: 500px;
+	width: 55%;
+	margin-left: 20%;
+    margin-top: 3%;
 }
 .colorLabel{
   color:white;
@@ -74,7 +112,40 @@ section label:hover{
   border:1px;
   border-radius: 10px;
   background:linear-gradient(to bottom,rgba(191,63,118,1) 0%,rgba(135,70,132,1) 57%,rgba(63,80,150,1) 100%);
-  height: 450px;
+  height: 500px;
+}
+.containerFade{
+  border:1px;
+  border-radius: 10px;
+}
+.containerF{
+	width: 75%;
+	margin-left: 20%;
+		margin-top: 3%;
+	
+}
+.containerError{
+	margin-left: 11%;
+		margin-top: 3%;
+		width: 45% !important;
+}
+.errorP p{
+	text-align: center;
+	font-family:sans-serif;
+	color: #fff;
+}
+.containerF p{
+	text-align: center;
+	font-family:sans-serif;
+	color: #fff;
+}
+.con{
+	position: absolute;
+	top:250px;
+	left:170px;
+	background: linear-gradient(to bottom,rgb(53, 150, 57) 0%,rgb(114, 101, 113) 57%,rgb(49, 56, 43) 100%);
+	border-radius: 50px;
+	border:2px solid black;
 }
 .container{
   margin-top: 5px;
@@ -110,4 +181,7 @@ section label:hover{
   cursor: pointer;
   background: #440027;
   color: white;
+}
+.center{
+	text-align: center;
 }

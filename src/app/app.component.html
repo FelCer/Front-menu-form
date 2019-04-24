@@ -1,53 +1,67 @@
 <section class="section">
-  <input type="checkbox" id='btn-menu'>
-  <label for='btn-menu'><img src='assets/img/icons8-menú-24.png' alt=''></label>
-  <nav class="menu">
-    <ul>
-      <li (click)='seleccion(item.name)' *ngFor='let item of miarreglo'>{{item.name}}</li>
-    </ul>
-  </nav>
+    <input type="checkbox" id='btn-menu'>
+    <label for='btn-menu'><img src='assets/img/icons8-menú-24.png' alt=''></label>
+    <nav class="menu">
+        <ul>
+            <li (click)='seleccion(item.name)' *ngFor='let item of miarreglo'>{{item.name}}</li>
+        </ul>
+    </nav>
 </section>
 
 
 <div *ngIf='this.formulario' class="row">
-  <div class="col-sm-1 col-md-3 col-lg-4"></div>
-  <div class="containerOne col-sm-6 col-md-5 col-lg-3 containerTable ">
-      <label class="colorLabel">Hola sabemos que quieres viajar a {{destino}}!</label>
-      <form >
-          <div class="container">
-              <label class="colorLabel" for="">Nombre Completo</label>
-          </div>
-          <div class="container">
-              <input  class="input" type="text" placeholder="Ingrese Nombre Completo" name='nombrecompleto'  [(ngModel)]='nombrecompleto'>
-          </div>
+    <div class=""></div>
+    <div class="containerOne  containerT ">
+        <h2 class="colorLabel center">Hola sabemos que quieres viajar a {{destino}}!</h2>
+        <form id='formUser'>
+            <div class="container">
+                <label class="colorLabel" for="">Nombre Completo</label>
+            </div>
+            <div class="container">
+                <input id='nombre' class="input" type="text" placeholder="Ingrese Nombre Completo" name='nombrecompleto'
+                    [(ngModel)]='nombrecompleto'>
+            </div>
 
-          <div class="container">
-              <label class="colorLabel" for="email">Email</label>
-          </div>
-          <div class="container">
-              <input  class="input" type="email" placeholder="Ingrese Su Correo"  name='email' [(ngModel)]='email'>
-          </div>
+            <div class="container">
+                <label class="colorLabel" for="email">Email</label>
+            </div>
+            <div class="container">
+                <input id='email' class="input" type="email" [email]="true" placeholder="Ingrese Su Correo" name='email'
+                    [(ngModel)]='email'>
+            </div>
 
-          <div class="container">
-              <label class="colorLabel" for="celular">Celular</label>
-          </div>
-          <div class="container">
-              <input  class="input" type="number" placeholder="Ingrese Su Celular" name='celular' [(ngModel)]='celular'>
-          </div>
+            <div class="container">
+                <label class="colorLabel" for="celular">Celular</label>
+            </div>
+            <div class="container">
+                <input id='celular' class="input" type="number" placeholder="Ingrese Su Celular" name='celular'
+                    [(ngModel)]='celular'>
+            </div>
 
-          <div class="container">
-              <label class="colorLabel" for="celular">Edad</label>
-          </div>
-          <div class="container">
-              <input  class="input" type="number" placeholder="Ingrese Su Edad" name='edad' [(ngModel)]='edad'>
-          </div>
+            <div class="container">
+                <label class="colorLabel" for="celular">Edad</label>
+            </div>
+            <div class="container">
+                <input id='edad' class="input" type="number" placeholder="Ingrese Su Edad" name='edad'
+                    [(ngModel)]='edad'>
+            </div>
 
-          <div class="container">
-              <input (click)="registrar()" class="button" type="button" value="Registar">
-          </div>
-          <div class="container">
-              <input (click)="cancelar()" class="button" type="button" value="Cancelar">
-          </div>
-      </form>
-  </div>
+            <div class="container">
+                <input (click)="registrar()" class="button" type="button" value="Registar">
+            </div>
+        </form>
+    </div>
+
+</div>
+<div id='fade' *ngIf='this.divFade' class="con containerFade  containerF  row">
+    <div class=""></div>
+    <div class="">
+        <p>Tu informacion fue enviada con exito, estaremos en contacto contigo.</p>
+    </div>
+</div>
+<div id='error' *ngIf='this.divError' class="con containerFade  containerError  row">
+    <div class=""></div>
+    <div class="errorP">
+        <p>{{error}}</p>
+    </div>
 </div>
