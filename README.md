@@ -26,3 +26,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # Front-menu-form
+
+
+Ejecutar los siguientes comandos
+
+npm install -g express o npm install --save express
+
+npm install --save-dev @babel/core @babel/cli
+
+npm install @babel/preset-env --save-dev
+
+y para correr el servidor de la carpeta backend(ubicarse en la carpeta)
+
+npm run start:server

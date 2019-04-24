@@ -1,4 +1,5 @@
 module.exports = (app)=>{
+    //Gets
     app.get("/",(req,res)=>{
         res.send("Yo soy user de page /");
     });
@@ -6,6 +7,6 @@ module.exports = (app)=>{
         res.send("Yo soy user de page /route");
     });
     app.get("*",(req,res)=>{
-        res.send("Yo soy user de");
+        res.send("Yo soy user de cualquier otra pagina");
     });
 }
