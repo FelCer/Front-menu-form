@@ -1,12 +1,14 @@
-const  users= require("../resources/users");
+const  listado= require("../resources/listado");
 module.exports={
-    getUser:function(){
+    getListado:function(){
         console.log("index js db todos!!1");
-        return users;
-
+        return listado;
     },
-    getUserById:function(id){
+    getListadoById:function(id){
         console.log("index js db solo user");
-        return users.filter(user=>user._id===id);
+        return listado.filter(user=>user._id===id);
+    },
+    postFormulario:function(nombrecompleto,email,celular,edad){
+      console.log("envio de datos ok",nombrecompleto,email,celular,edad);
     }
 };
